@@ -8,7 +8,7 @@ Bye Bye
 
 ##Hello World##
 
-[My Github Pages](https://a1yao.github.io/cse15l-lab-reports/)
+[Wikipedia](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/420px-PNG_transparency_demonstration_1.png)
 
