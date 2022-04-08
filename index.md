@@ -20,12 +20,13 @@ Hello World!
 4. hello
 5. world
 
-Hello World:
+Horizontal rule:
 ***
 
 'print("hello world")'
 
 '''
+# code block
 for i in list:
   print("hello world")
 '''
