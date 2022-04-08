@@ -23,10 +23,10 @@ Hello World!
 Horizontal rule:
 ***
 
-'print("hello world")'
+`print("hello world")`
 
-'''
+```
 # code block
 for i in list:
   print("hello world")
-'''
+```
