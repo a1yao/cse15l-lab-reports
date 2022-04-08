@@ -1,0 +1,1 @@
+![Lab Write Up](howToScreenshot.PNG)
