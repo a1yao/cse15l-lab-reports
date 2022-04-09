@@ -1,13 +1,13 @@
-# Setting up and logging into a course specific ieng6 account #
+# Setting up and logging into a course specific ieng6 account
 
-## Install VSCode ##
+## Install VSCode
 Go to the [Visual Studio Code Website](https://code.visualstudio.com/) and follow the instructions to install VSCode based on your operating system. 
 
 After installing and opening the program, a window like below should show up.
 
 ![VSCode](vscode.png)
 
-## Remotely Connecting ##
+## Remotely Connecting
 
 If you're on a Windows operating system, the first step you need to complete is installing OpenSSH. Follow the steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
