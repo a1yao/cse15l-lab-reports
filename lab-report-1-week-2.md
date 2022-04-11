@@ -57,11 +57,11 @@ Enter your password when prompted then return to your ieng6 terminal and run the
 ![whereAmIClient](whereAmIClient.png)
 ![whereAmIServer](whereAmIServer.png)
 
-## Optimizing Remote Running
+## Setting an SSH Keys. 
 
 Logging in and copying files over using `scp` are very time-expensive because they require you to type your password each time. 
 
-We can optimize remote running by adding SSH Keys, using `ssh-keygen` and following the directions [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation).
+We can make this process faster by adding SSH Keys, using `ssh-keygen` and following the directions [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation).
 
 Setting up SSH Keys allows us to login to ieng6 and `scp` files without entering a password each time. 
 
@@ -69,3 +69,6 @@ Setting up SSH Keys allows us to login to ieng6 and `scp` files without entering
 
 As we can see above, I'm now able to log in to my ieng6 account without typing a password.
 
+## Optimizing Remote Running
+
+Finally, we tried many different combinations of approaches to find out how we could best optimize remote running. We learned that instead of typing commands separately, we could direclty run a command on the remote server by simply adding the command after our ssh command in quotes. We also learned about using semicolons to run multiple commands on the same line. 
