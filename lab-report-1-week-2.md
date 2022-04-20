@@ -1,4 +1,4 @@
-# Setting up and logging into a course specific ieng6 account
+# Week 2 Lab 1
 
 ## Install VSCode
 Go to the [Visual Studio Code Website](https://code.visualstudio.com/) and follow the instructions to install VSCode based on your operating system. 
