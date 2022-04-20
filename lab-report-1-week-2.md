@@ -72,3 +72,11 @@ As we can see above, I'm now able to log in to my ieng6 account without typing a
 ## Optimizing Remote Running
 
 Finally, we tried many different combinations of approaches to find out how we could best optimize remote running. We learned that instead of typing commands separately, we could direclty run a command on the remote server by simply adding the command after our ssh command in quotes. We also learned about using semicolons to run multiple commands on the same line. 
+
+![optimize](optimizingRemoteRunning.PNG)
+
+In this screenshot, I can use the command: 
+
+`ssh cs15lsp22ajq@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"` 
+
+to login to the server, compile, and run WhereAmI, all in one line. 
