@@ -8,10 +8,12 @@
 
 Symptom of failure-inducing input:
 ```
-Exception in thread "main" java.nio.file.NoSuchFileException: new-file.md
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 ```
 
-The issue with the failure-indcuing input was that it had a new line after it's last character. In the original code we had, the while loop would loop infinitely because the current index would not be able to increment past markdown.length due to this new line in the file. 
+![error1](error1.PNG)
+
+The symptom is that we are running out of memory, or Java heap space, as stated in the exception message. This symptom is caused by an infinite while loop, the bug in this scenario. The bug, the infinite while-loop, occurs because of the failure-inducing input, in which we have an extra new line after the last character in the .md file, causing the current index to not be able to increment past markdown.length due.
 
 ## Second Code Change
 
@@ -25,7 +27,9 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException:
 begin 0, end -1, length 11
 ```
 
-In the failure-inducing input, the text does not contain any parenthesis after the brackets and thus nothing should output. However, because .indexOf() returns -1 when the character is not present, closeParen is set to -1 and thus results in the symptom of an OutOfBoundsException beacuse -1 is out of bounds when called as an arg for .substring(). 
+![error2](error2.PNG)
+
+The symptom is that we have an IndexOutOfBoundsException. This is because we are calling .substring() with args that are out of bounds of the string (this is the bug). In the failure-inducing input, the text does not contain any parenthesis after the brackets and thus nothing should output. However, because .indexOf() returns -1 when the character is not present, closeParen is set to -1 and thus results in the symptom of an OutOfBoundsException beacuse -1 is out of bounds when called as an arg for .substring(). 
 
 ## Third Code Change
 
@@ -38,5 +42,6 @@ Symptom from failure-inducing input:
 ```
 [Something]
 ```
+![error3](error3.PNG)
 
-The failure-inducing input is missing a close bracket and thus should not print anything as that is not a proper way to implement a url into a .md file. Because our code will still search for a open parenthesis and close parenthesis even if the close bracket is missing (-1 integer value), the .substring will still find the "something" and output it, even when nothing should output.
+The symptom is that [Something] is output when the output should just be an empty array. The bug causing this is the fact that our code will still search for a open parenthesis and close parenthesis even if the close bracket is missing (-1 integer value), the .substring will still find the "something" and output it, even when nothing should output. The failure-inducing input is missing a close bracket, thus it induces the symptom. 
